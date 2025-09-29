@@ -1,4 +1,4 @@
-console.log("JavaScript Connected!")
+// console.log("JavaScript Connected!")
 
 // let num = 12 > 4;
 // console.log(num) 
@@ -141,4 +141,16 @@ console.log("JavaScript Connected!")
 // console.log(cond2)
 
 
+// let age = 17;
 
+// if (!(age >= 18)) {
+//     console.log("You are not an adult");
+// } else {
+//     console.log("You are an adult");
+// }
+
+// let value1 = "Hello"
+// console.log(!value1)
+
+// let value2 = "Hello"
+// console.log(!!value2)
