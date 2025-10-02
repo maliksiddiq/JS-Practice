@@ -244,6 +244,51 @@ console.log('JavaScript Connected!');
 // }
 
 
+
+// -----------------------------------------------------------------------------------------------  !
+
+// var userInput = parseInt(prompt("Please enter a number between 5 and 10:"));
+
+// if (userInput < 5 || userInput > 10){
+//     alert("Please enter a valid number between 5 and 10.");
+// }
+// else{
+//     document.write(`<h3>" Your guess : ${userInput} "</h3>`);
+// }
+
+// var randomNum = Math.floor(Math.random() * (10 - 5 + 1) + 5 );
+// document.write(`<h3>" Random number : ${randomNum} "</h3>`)
+
+// if (userInput === randomNum) {
+//     document.write(`<h4>" Congratulations ! You guessed the correct number. "</h4>`)
+// }
+// else {
+//     document.write(`<h4> " Sorry ! Your guess didn't match. Try again. " </h4>`);
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Round → nearest
 
 // Floor → hamesha neeche
