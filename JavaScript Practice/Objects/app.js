@@ -246,3 +246,196 @@
 
 // console.log(c1);
 // console.log(c2);
+
+
+//   ----------------------------------------------------------
+
+// 🔹 1. Object me property Add karna
+
+// Dot notation
+
+// let car = { brand: "Toyota" };
+// car.model = 'Corolla';      naya property add ho gaya
+// console.log(car)      { brand: "Toyota", model: "Corolla" }
+
+
+// Bracket notation
+
+// let car = { brand: "Toyota" };
+// car ['year']  = 2020;     property add ki
+// console.log(car);       { brand: "Toyota", year: 2020 }
+
+
+// let car = {brand : 'Toyota'}
+// Object.assign(car,{model : 2022});
+// console.log(car);
+
+
+//   ----------------------------------------------------------
+
+
+// 🔹 2. Object me property Delete karna
+
+// delete operator
+
+// let car = { brand: "Toyota", model: "Corolla" };
+// delete car.model;   //  model remove ho gaya
+
+// console.log(car);  //  { brand: "Toyota" }
+
+
+// let studentNames = {
+//     student1 : 'Saad Ali',
+//     student2 : 'Siddiq',
+//     student3 : 'Aqib',
+//     student4 : 'Hamza',
+//     student5 : 'Asif',
+// }
+
+// console.log(studentNames);
+
+// delete studentNames.student3;
+
+// console.log(studentNames);
+
+
+// Destructuring + rest (...)  rest Operator  ----   Frameworks  {React / Redux }
+
+// 🔹 Rest Operator (...) ka kaam
+
+// Jab hum object destructuring karte hain, jo keys explicitly nikal lete hain (model ki tarah),
+
+// Uske baad jo baaki bachi hui properties hoti hain, wo sab ek naye object me ikatthi kar leta hai.
+
+// 🔹 Important Note:
+
+// Rest operator delete nahi karta purane object se.
+
+// Bas ek naya object banata hai jisme wo properties hoti hain jo destructuring me abhi tak nahi nikli.
+
+
+// 👉 Short me:
+
+// Rest operator = "jo bacha hua hai, usko nikal kar ek object/array me dal do"
+
+
+// let car = { brand: "Toyota", model: "Corolla", year: 2020 };
+
+// let {model, ...newCar} = car;
+
+// console.log(car);
+// console.log(typeof car);
+
+// console.log(newCar);
+// console.log(typeof newCar);
+
+
+// let studentNames = {
+//     student1 : 'Saad Ali',
+//     student2 : 'Siddiq',
+//     student3 : 'Aqib',
+//     student4 : 'Hamza',
+//     student5 : 'Asif',
+// }
+
+// console.log(studentNames);
+
+// let {student3, ...newStudent} = studentNames;
+
+// console.log(newStudent);
+
+// console.log(studentNames);
+
+
+//   ----------------------------------------------------------
+
+// 🔹 3. Object me property Replace (update) karna
+
+// Direct overwrite (dot/bracket)
+
+// let car = { brand: "Toyota", model: "Corolla" };
+// car.model = 'Camry';     // replace kiya
+// console.log(car);    // { brand: "Toyota", model: "Camry" }
+
+
+// let car = { brand: "Toyota", model: "Corolla" };
+// car['model'] = 'Supra';
+// console.log(car);
+
+
+// let car = { brand: "Toyota", model: "Corolla" };
+// Object.assign(car,{model : 'Supra'});
+// console.log(car);
+
+
+// Spread operator (...)
+
+// let car = { brand: "Toyota", model: "Corolla" };
+// car = {...car, model : 'Fortuner'};
+
+// console.log(car);  // { brand: "Toyota", model: "Fortuner" }
+
+
+// let student = {
+//     name : 'Malik',
+//     age : 20,
+// }
+
+// console.log(student);   //   {name: 'Malik', age: 20}
+
+// student = {...student, name : 'Siddiq' };
+// console.log(student);
+
+
+//  ------------------------------------------------------------------------------------------------------- 
+//  ------------------------------------------------------------------------------------------------------- 
+
+//    Example + Practice of objects !
+
+// let cityNames = {
+//     city1 : 'Lahore',
+//     city2 : 'Islamabad',
+//     city3 : 'Quetta',
+//     city4 : 'Karachi',
+//     city5 : 'Multan',
+// }
+
+// console.log(cityNames);
+// console.log(cityNames.city3);
+// console.log(typeof cityNames.city3);
+
+// console.log(cityNames['city4']);
+// console.log(typeof cityNames['city4']);
+
+
+// let lastName = 'Mazhar';
+
+// let studentNames = {
+//     name1 : 'Siddiq',
+//     name2 : 'Saad Ali',
+//     name3 : 'Sohaib',
+//     name4 : 'Shoiab',
+//     lastName
+// }
+
+// console.log(studentNames);
+// console.log(studentNames.lastName);
+
+
+// let cityNames = {
+//     ['1city'] : 'Lahore',
+//     ['2city'] : 'Multan',
+//     ['3city'] : 'Karachi',
+//     ['4city'] : 'Islamabad'
+// }
+
+// cityNames['5city'] = 'Peshawar';
+
+// console.log(cityNames);
+// console.log(cityNames['1city']);
+// console.log(cityNames['2city']);
+// console.log(cityNames['3city']);
+// console.log(cityNames['4city']);
+// console.log(cityNames['5city']);
+
+
