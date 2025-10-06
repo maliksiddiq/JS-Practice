@@ -1,203 +1,248 @@
-// console.log('JavaScript Connected!');
+console.log('JavaScript Connected!');
 
-// let firstName = "";
-// let lastName = '';
+//   Objects !
 
-// console.log(firstName === lastName);
+// Object ek aisi cheez hai jisme hum data ko "key : value" pair ki form me store karte hain.
 
-// let userName1 = [];
-// let userName2 = [];
+//  how to create object in js  
 
-// console.log(userName1)
-// console.log(userName2)
+// 🔹 1. Object Literal (sabse simple aur zyada use hone wala)
 
-// console.log(userName1 === userName2);
-
-// let person = { name:  'Ali' , role:  'Student'};
-// person.age = 20;
-
-// console.log(person);
-
-// let naya = new Object ();
-// console.log(naya);
-// naya.first_name = 'Malik' , naya.last_name = 'Siddiq' ;
-// console.log(naya);
-// naya.last_name = 'Aqib';
-// console.log(naya);
-// naya.age = 19;
-// console.log(naya);
-// naya.age = 22;
-// console.log(naya);
-// delete naya.age;
-// console.log(naya);
-// naya.age = 27;
-// console.log(naya);
-// naya.age = 32;
-// console.log(naya);
-// naya.tongue = 'Urdu';
-// console.log(naya);
+// let person = {
+//   name: "Ali",
+//   age: 22,
+//   city: "Karachi"
+// };
 
 
-// let studentDetails = {
-//     first_name : "Malik",
-//     last_name :  "Siddiq",
+// ✅ Zyada use hota hai kyunki:
+
+// Short aur readable hai.
+
+// Simple data rakhnay ke liye best.
+
+// Quick testing aur real-world objects ke liye perfect.
+
+
+// -----------------------------------------------------------------------------------------------
+
+// 🔹 2. new Object() Constructor
+
+
+// let car = new Object();
+// car.brand = 'Toyota';
+// car.model = 'Corrola';
+
+
+// 👉 Ye tareeqa kam use hota hai kyunki literal zyada simple hai.
+// ✅ Lekin kabhi kabhi useful hota hai jab hume object dynamically banani ho ya prototype chain ki zarurat ho.
+
+
+// -----------------------------------------------------------------------------------------------
+
+// 3 Using class (Modern JS way)
+
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+// }
+
+// let p1 = new Person("Ali", 22);
+// let p2 = new Person("Ahmed", 25);
+
+
+//   ----------------------------------------------------------
+
+
+// 🔹 Class
+
+// Class ek blueprint (naqsha) hai jisse hum similar objects bana sakte hain.
+
+// 👉 Example: Person class se multiple persons bana sakte ho.
+
+
+//   ----------------------------------------------------------
+
+
+// Constructor kya hota hai?
+
+// Constructor ek special function hai jo class ke andar hota hai.
+
+// Jab aap new Person(...) likhte ho, to constructor automatic call hota hai.
+
+// Constructor ka kaam hota hai naya object initialize karna — yani properties set karna (jaise name, age).
+
+// Constructor ek special function hota hai class ke andar.
+// 👉 Jab bhi new keyword ke saath object banate ho, constructor automatic call hota hai aur object ki properties set karta hai.
+
+
+//   ----------------------------------------------------------
+
+
+// 🔹 this
+
+// this ka matlab hai jo object iss waqt ban raha hai ya jis pe kaam ho raha hai.
+// 👉 this.name = name; ka matlab: object ki property name me constructor ka parameter name store kar do.
+
+
+
+//   ----------------------------------------------------------
+
+
+// 🔹 new
+
+// new ek keyword hai jo naya object banata hai class se.
+// 👉 Agar new na lagao to object create nahi hoga.
+
+
+//   ----------------------------------------------------------
+
+
+// 🔹 Simple real life socho
+
+// {} = ek haath se likha CV (sirf ek insaan ka data).
+
+// new Person("Ahmed", 25) = form ka template → jisme har baar nayi values bhar ke naya CV generate hota hai.
+
+
+//   ----------------------------------------------------------
+
+
+// class Person {
+//   constructor(name, age) {
+//     this.name = name; // object ki property set ho rahi
+//     this.age = age;
+//   }
+// }
+
+// let p1 = new Person("Ali", 22);   // naya object bana
+// let p2 = new Person("Ahmed", 25); // ek aur naya object
+
+
+//   ----------------------------------------------------------
+
+// Object literal notation se
+
+// Har student ko manually likhna pad raha hai
+
+
+// let student1 = {
+//     name : 'Siddiq',
 //     age : 20,
-//     isGraduate : false,
-//     city : 'Karachi'      
+//     grade : 'A'
 // }
 
-// console.log(studentDetails);
-
-
-// let studentDetails = new Object();
-// studentDetails.first_name = 'Malik'
-// studentDetails.last_name = "Siddiq"
-// studentDetails.age = 20
-// studentDetails.isGraduate = false
-// studentDetails.city = 'Karachi'
-
-// console.log(studentDetails);
-
-
-// let studentDetails = new Object ();
-
-// studentDetails.first_name = 'Malik' , studentDetails.last_name = 'Siddiq'
-
-// console.log(studentDetails);
-
-
-// let arr = [1 , 2 , 3 , 4 , 5 ];
-
-// console.log(arr);
-// console.log(arr[4]);
-// console.log(typeof arr);
-
-
-// let obj = {
-//     num1 : 1,
-//     num2 : 2,
-//     num3 : 3,
-//     num4 : 4,
-//     num5 : 5
-// }
-
-// console.log(obj);
-// console.log(obj.num5);
-// console.log(typeof obj);
-
-
-// let obj  = {
+// let student2 = {
 //     name : 'Aqib',
-//     father_name : 'Sabir',
 //     age : 22,
-//     qualification : 'Matric',
-//     otherDetails : {
-//         city_name : 'Karachi',
-//         mother_tongue : 'English',
-//         religion : 'Islam'
+//     grade : 'B'
+// }
+
+// let student3 = {
+//     name : 'Abdullah',
+//     age : 18,
+//     grade : 'C'
+// }
+
+// console.log(student1 , student2 , student3);
+
+
+// 👉 Problem:
+
+// Har student ke liye repeat code likhna pad raha hai.
+
+// Agar 100 students hain to 100 objects manually likhne padenge.
+
+// Maintain karna mushkil hai.
+
+
+//   ----------------------------------------------------------
+
+// class student {
+//     constructor(name, age,  grade) {
+//         this.name  = name;
+//         this.age = age;
+//         this.grade = grade;
 //     }
 // }
 
-// console.log(obj);
-// console.log(obj.otherDetails);
-// console.log(obj.otherDetails.city_name);
-// console.log(typeof obj.otherDetails.city_name);
+// Ab bas class se objects banao 
+
+// let student1 = new student ('Siddiq', 20, 'A');
+// let student2 = new student ('Aqib', 22, 'B');
+// let student3 = new student ('Abdullah', 18, 'C');
+
+// console.log(student);
+// console.log(student1);
+// console.log(student2);
+// console.log(student3);
 
 
-// let studentDetails = {
-//     first_name : 'Saad',
-//     last_name : 'Ali',
-//     father_name : 'Adeel',
-//     age : 24,
-//     otherDeatils : {
-//         city_name : 'Karachi',
-//         qualification : 'Matric',
-//         tongue : 'English',
-//     }
-// } 
+// 👉 Fayda:
 
-// console.log(studentDetails);
-// console.log(studentDetails.age);
-// console.log(typeof studentDetails.age);
-// console.log(typeof studentDetails.last_name);
-// console.log(studentDetails.otherDeatils);
-// console.log(studentDetails.otherDeatils.city_name);
-// console.log(studentDetails.otherDeatils.qualification);
-// console.log(studentDetails.otherDeatils.tongue);
+// Sirf ek blueprint (class) likhna pada.
+
+// Chahe 3 students ho ya 300, har ek ke liye bas new Student(...) likhna hai.
+
+// Code clean, reusable aur easy to maintain hai
 
 
-// let islamic_Countries = {
-//     country1 : 'Pakistan',
-//     country2 : 'Afghanistan',
-//     country3 : 'Saudia Arabia',
-//     country4 : 'Bangladesh',
-//     country5 : 'Seria',
-// }
-
-// console.log(islamic_Countries);
-
-// let countriesName = {
-//     english_countries : {
-//        e_coun1 : 'Australia', 
-//        e_coun2 : 'England', 
-//        e_coun3 : 'Scotland', 
-//        e_coun4 : 'Switzerland', 
-//        e_coun5 : 'Japan',
-//        islamic_Countries 
-//     }
-// }
-
-// console.log(countriesName);
+//   ----------------------------------------------------------
 
 
-// let countriesName = {
-//     english_countries : {
-//         e_coun1 : "Australia",
-//         e_coun2 : "England",
-//         e_coun3 : "Scotland",
-//         e_coun4 : "Switzerland",
-//         e_coun5 : "Japan",
-//         islamic_countries : {
-//             i_coun1 : "Pakistan",
-//             i_coun2 : "Afghanistan",
-//             i_coun3 : "Saudia Arabia",
-//             i_coun4 : "Bangldesh",
-//             i_coun5 : "Seria",
-//         }
+// let car1 = {
+//    brand: "Toyota",
+//    model: "Corolla",
+//    year: 2020
+// };
+
+
+// let car2 = {
+//   brand: "Honda",
+//   model: "Civic",
+//   year: 2021
+// };
+
+
+// let car3 = {
+//   brand: "Suzuki",
+//   model: "Alto",
+//   year: 2019
+// };
+
+
+// console.log(car1, car2, car3);
+
+
+//   ----------------------------------------------------------
+
+// class car {
+//     constructor(brand, model , year) {
+//         this.brand = brand;
+//         this.model = model;
+//         this.year = year;
 //     }
 // }
 
-// console.log(countriesName);
-// console.log(countriesName.english_countries);
-// console.log(countriesName.english_countries.islamic_countries);
+// let car1 = new car ('Toyota', 'Corolla', 2020);
+// let car2 = new car("Honda", "Civic", 2021);
+// let car3 = new car("Suzuki", "Alto", 2019);
 
-// last
-
-// console.log(countriesName.english_countries.e_coun5);
-// console.log(countriesName.english_countries.islamic_countries.i_coun5);
+// console.log(car1 , car2 , car3);
 
 
-// let subjectsName = {
-//     English_Sub : {
-//         e_sub1 : "English",
-//         e_sub2 : "Biology",
-//         e_sub3 : "Physic",
-//         e_sub4 : "Chemistry",
-//         Urdu_Sub : {
-//             u_sub1 : "Urdu",
-//             u_sub2 : "Islamiat",
-//             u_sub3 : "Serat",
-//         }
+// class Car {
+//     constructor(company, modelName, releaseYear) {
+//         this.brand = company;
+//         this.model = modelName;
+//         this.releaseYear = releaseYear;
 //     }
 // }
 
-// subjectsName.English_Sub.e_sub3 = "Maths";      Replace
+// let c1 = new Car ("Toyota", "Corolla", 2020);
+// let c2 = new Car ("Honda", "Civic", 2022);
 
-// subjectsName.English_Sub.Urdu_Sub.u_sub4 = "Mutala Pakistan";      Add
-// subjectsName.English_Sub.Urdu_Sub.u_sub5 = "General Knowledge";  Add
-
-// delete subjectsName.English_Sub.e_sub2;  Delete
-
-// console.log(subjectsName);
-// console.log(subjectsName.English_Sub);
-// console.log(subjectsName.English_Sub.Urdu_Sub);
+// console.log(c1);
+// console.log(c2);
