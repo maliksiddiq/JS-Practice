@@ -154,3 +154,14 @@
 
 // let value2 = "Hello"
 // console.log(!!value2)
+
+
+// let userAge1 = 22;
+// let userAge2 = '22';
+
+// if (userAge1 === userAge2) {
+//     console.log('Values are same!')
+// }else {
+//     console.log('Type are diffrent')
+// }
+
