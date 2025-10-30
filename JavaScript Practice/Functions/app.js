@@ -181,5 +181,167 @@
 // let result = checkNumber(4)
 // console.log(result)
 
+// --------------------------------------------------
+
+
+// function checkResult(marks) {
+
+//     let total = 0;
+
+//    for(let i = 0; i < marks.length; i++) {
+//     total += marks[i]
+//    }
+
+//    let average = total / marks.length
+
+//   console.log("Total Marks:", total);
+//   console.log("Average Marks:", average);
+
+//    if(average >= 50) 
+//     return 'Passed!'
+//   else 
+//    return 'Failed!'  
+// }
+
+// let result = checkResult([10 , 20 , 30 , 30])
+
+// console.log(`Result ${result}`)
+
+
+// function checkResult(marks) {
+
+//     let total = 0;
+
+//     for(let i = 0; i < marks.length; i++ ) {
+//         total += marks[i]
+//     }
+
+//     let average = total / marks.length
+
+//     console.log(`${marks.length}`)
+//     console.log(`Total Marks : ${total}`)
+//     console.log(`Average Marks : ${average}`)
+
+//     if(average >= 50) {
+//         return 'Passed'
+//     }
+//     else return 'Failed!'
+
+// }
+
+// let result = checkResult([50 , 50 , 100 , 20])
+// console.log(result)
+
+
+// function CalculateTotal(marks) {
+
+//     let total = 0;
+
+//     for(let i = 0; i < marks.length;i++) {
+//         total += marks[i]     
+//     }
+
+//     let average = total / marks.length
+
+//     console.log('Length of sub : ' + marks.length)
+//     console.log('Total Marks : ' + total)
+//     console.log('Average : ' + average)
+
+//     if(average >= 50) {
+//         return 'Passed!'
+//     }
+//     else {
+//         return 'Failed!'
+//     } 
+// }
+
+// let subjectsMarks = [50 , 70 , 80 , 100];
+// let checkResult = CalculateTotal(subjectsMarks)
+
+// console.log('Result : ' + checkResult);
+
+
+
+// --------------------------------------------------
+
+// function sayHello(name) {
+//     console.log(`Hello ${name}`)
+// }
+
+// sayHello('Malik')
+// sayHello('Malik Siddiq')
+
+// let save = sayHello('Awan');
+
+
+// function add(a , b) {
+//     console.log(a + b)
+// } 
+
+// add()  result NaN
+
+
+// function add(a , b) {
+//     console.log(a + b)
+//     return a + b
+// }
+
+// let save = add(5 , 5)
+// console.log(save)
+
+// function sub(a , b) {
+//     return a - b
+// }
+
+// let save = sub(15 , 3)
+// console.log(save)
+
+
+// function add(a , b) {
+//     console.log(a + b)
+//     return a + b
+// }
+
+// add(5 , 5)
+
+// let save = add(10 , 10);
+// console.log(save)
+
+
+// function add(a , b) {
+//     return a + b
+// }
+
+// let save = add(12 , 12)
+// console.log(save)
+
+// function total(price , quantity) {
+//     return price * quantity
+// }
+
+// let save = total(50 , 2)
+// console.log(save)
+
+// function total(price = 50 , quantity = 2) {
+//     return price * quantity
+// }
+
+// let save = total()
+// console.log(save)
+
+
+// function total(price , quantity) {
+    
+//     if(price === undefined) {
+//         price = 150
+//     }else if(quantity === undefined) {
+//         quantity = 2
+//     } 
+
+//     return price * quantity
+// }
+
+// let save = total(undefined , 5)
+// console.log(save)
 
 
