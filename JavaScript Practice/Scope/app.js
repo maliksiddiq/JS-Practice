@@ -148,3 +148,265 @@
 // countDown(5)
 
 
+// ----------------------------------- Global Scope /  Local Scope   --------------------------------------------- 
+
+//  Scope
+// Kis jagah (area) me koi variable, function, ya constant accessible (use) ho sakta hai.
+
+//  JavaScript me mainly 2 types ke scope hote hain
+
+// Global Scope
+// Local Scope (ya Block/Function Scope)
+
+
+// Global Scope
+// Global Scope wo scope hota hai jahan koi variable, function, ya object program ke sabhi parts me — yani poore code ke andar — accessible (use) hota hai.
+// Agar koi variable ya function kisi function, block ({}), ya module ke bahar declare kiya gaya ho, to wo global scope me hota hai.
+
+
+//  Local Scope
+//  Agar koi variable function ke andar ya block ke andar (like {}) declare kiya gaya ho,
+//  to wo local scope me hota hai.
+
+//  -------------------------- Global Scope --------------------------
+
+// let userName = 'Siddiq'
+// console.log(userName)
+
+// function introduceMe() {
+//     console.log('Hi i am' + ' ' + userName)
+// } 
+
+// introduceMe()
+
+// debugger
+
+// var a = 10
+// let b = 20
+// const c = 30
+
+// console.log(a)
+// console.log(b) 
+// console.log(c) 
+
+// console.log(window.a)
+// console.log(window.b)
+// console.log(window.c)
+
+// function sum() {
+//     console.log(a + b + c)
+// }
+// sum()
+
+// {
+//     let first = a
+//     console.log(first)
+// }
+
+
+// -----------------------------------------------------------------------------------------------
+
+//  -------------------------- Local Scope  Blocked Scope --------------------------
+
+// function sayHi() {
+//     let user = "Hi EveryOne!"
+//     console.log(user)
+// }
+
+// sayHi()
+// console.log(user)
+
+
+// function subtract() {
+//     const num1 = 20
+//     const num2 = 10
+//     console.log(`First number is ${num1}`)
+//     console.log(`Second number is ${num2}`)
+//     console.log(num1 - num2)
+    
+// }
+
+// subtract()
+// console.log(num1)
+// console.log(num2)
+
+// {
+//     var a = 1
+//     let b = 2
+//     const c = 3
+
+//     console.log(a)
+//     console.log(b)
+//     console.log(c)
+// }
+
+// console.log(a)
+// console.log(b)
+// console.log(c)
+
+// function number() {
+//     var num1 = 10;
+//     let num2 = 20;
+//     const num3 = 30;
+
+//     console.log(num1)
+//     console.log(num2)
+//     console.log(num3)
+// }
+
+// number()
+
+//     console.log(num1)
+//     console.log(num2)
+//     console.log(num3)
+
+// {
+//     var num1 = 10;
+//     let num2 = 20;
+//     const num3 = 30;
+
+//     console.log(num1)
+//     console.log(num2)
+//     console.log(num3)
+
+// }
+
+// console.log(num1)
+// console.log(num2)
+// console.log(num3)
+
+// -------------------------------------------------------- Scope ------------------------------------------------
+
+
+// var num1 = 10
+// let num2 = 20
+// const num3 = 30
+
+// console.log(num1)
+// console.log(num2)
+// console.log(num3)
+
+// function sayHi() {
+//     console.log('Hi Everyone!')
+//     console.log(num1)
+//     console.log(num2)
+//     console.log(num3)
+// }
+
+// sayHi()
+
+
+// {
+//     let num1 = 20
+//     console.log(num1)
+
+//     const num2 = 30
+//     console.log(num2)
+
+//     var a = 40
+//     console.log(a)
+// }
+
+// console.log(num1)
+// console.log(num2)
+// console.log(num3)
+
+
+// function number() {
+//     let a = 10
+//     const b = 20
+//     var c = 30
+
+//     console.log(a)
+//     console.log(b)
+//     console.log(c)
+// }
+
+    // console.log(a)
+    // console.log(b)
+    // console.log(c)
+
+// number()
+
+
+// ---------------------------------------- Lexical Scope / Closure -----------------------------------------------
+
+// Lexical Scope ka matlab hota hai:
+// Function jahan likha gaya hai, us jagah ke hisaab se decide hota hai ke wo kin variables ko access kar sakta hai.
+// "Lexical" ka matlab hota hai — “code likhne ke waqt decide hona” (not run time pe).
+
+
+// let a = 10
+
+// function outer() {
+//     let b = 20;
+
+//     function inner() {
+//        console.log(a) 
+//        console.log(b)
+//     }
+
+//     inner()
+// }
+
+// outer()
+
+
+// let name = 'Ali'
+
+// function greet() {
+//     console.log(`My name is ${name}`)
+// }
+
+// function change() {
+//     let name = 'Usama'
+//    greet()
+// }
+
+// change()
+
+
+// let name = 'Ali' 
+
+// function outer() {
+//     let name = 'Usama'
+
+//     function inner() {
+//         console.log(`My name is ${name}`)
+//     }
+//     inner()
+// }
+
+// outer()
+
+
+// let name = 'Ali'
+
+// function greet() {
+//     console.log(`My name is ${name}`)
+// }
+
+// function change() {
+//     let name = 'Ramzan'
+//     greet()
+// }
+// change()
+
+
+// debugger
+
+// let name = 'Ali'
+
+// function outer() {
+//     let name = 'Ramzan'
+
+//     function inner() {
+//         console.log('My name is' + " " + name)
+//     }
+
+//     return inner()
+// }
+// outer()
+
+
+
