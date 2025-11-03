@@ -127,7 +127,9 @@
 //     console.log('Hi EveryOne!')
 // }
 
-// sayHi()
+// console.log(sayHi())
+// console.log(typeof sayHi)
+
 
 // ----------------------------------- Recursion Function    ---------------------------------------------  
 
@@ -352,28 +354,28 @@
 // outer()
 
 
-// let name = 'Ali'
+// let name = 'Malik'
 
 // function greet() {
 //     console.log(`My name is ${name}`)
 // }
 
 // function change() {
-//     let name = 'Usama'
-//    greet()
+//     let name = 'Sadd Ali'
+//     greet() 
 // }
 
 // change()
 
-
-// let name = 'Ali' 
+// let name = 'Ali'
 
 // function outer() {
 //     let name = 'Usama'
-
+//     console.log(name)
 //     function inner() {
 //         console.log(`My name is ${name}`)
 //     }
+
 //     inner()
 // }
 
@@ -407,6 +409,11 @@
 //     return inner()
 // }
 // outer()
+
+
+
+
+
 
 
 
