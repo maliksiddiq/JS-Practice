@@ -461,15 +461,128 @@
 // Inner function apne birth-place ka environment yaad rakhta hai — isi yaad ko closure kehte hain.
 
 // function outer() {
-//   let x = 10; 
-
+//   let x = 20; 
+//   console.log('Outer!')  
 //   function inner() {
-//     console.log(x);   
+//     console.log(x); 
+//     return 'return value!'  
 //   }
 
 //   return inner;
 // }
 
-// const fn = outer();
+// outer()
+// const fn = outer()
+// console.log(fn)
 // console.log(fn())
-// fn();
+
+
+// --------------------------------------- 
+
+// function fn1() {
+//     let a = 20;
+//     console.log('Fisrt Function!')
+   
+//     function fn2() {
+//       console.log(a)  
+//       console.log('Sec Function!')  
+//       return 'sec'
+//     }
+
+//     return fn2
+// }
+
+// const r = fn1()
+// console.log(r)
+// console.log(r())
+
+
+// --------------------------------------- 
+
+// function outer() {
+//     let a = 20;
+//     console.log('Outer Function!')
+//     console.log(a)
+
+//     function inner1() {
+//         console.log('inner 1 Function!')
+//         return 'Inner Function!'
+//     }
+
+//     inner1()
+
+//     return inner1
+// }
+
+
+// let save = outer()
+// console.log(save)
+// console.log(save())
+
+
+// --------------------------------------- 
+
+// function a() {
+//     let a = 10;
+//     console.log('A Function!')
+
+//     function b() {
+//         console.log('B Function!')
+//     }
+
+//     function c() {
+//         console.log('C Function!')
+//     }
+
+//     b()
+//     c()
+// }
+
+// a()
+
+
+// ---------------------------------------------------------  
+
+// function a() {
+//     let a = 10;
+//     console.log('A Function!')
+//     console.log('a Function variable ' + a)
+
+//     function b() {
+//         console.log('B Function!')
+//         console.log('b Function variable ' + a)
+//         let ba = 20;
+//         console.log(ba)
+//     }
+
+//     function c() {
+//         console.log('C Function!')
+//         console.log('C Function variable ' + a)
+//         console.log(ba)
+//     }
+
+//     b()
+//     c()
+// }
+
+// a()
+
+
+// ---------------------------------------------------------  
+
+// function a() {
+//     let num = 10;
+//     console.log('A Function!')
+
+//     function b() {
+//         console.log(num)
+//         console.log('B Function!')
+//         return 'B Func'
+//     }
+    
+//    return  b
+// }
+
+// const save = a()
+// console.log(save)
+// console.log(save())
