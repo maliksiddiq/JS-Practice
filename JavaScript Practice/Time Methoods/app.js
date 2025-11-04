@@ -586,3 +586,39 @@
 // const save = a()
 // console.log(save)
 // console.log(save())
+
+
+// ---------------------------------------------------------  
+
+// function outer() {
+//     let num = 10;
+//     console.log('Outer function!')
+//     console.log(num)
+//     // console.log(num1)
+//     function inner() {
+//         let num1 = 20;
+//         console.log(num)
+//         console.log('Inner Function!')
+//         console.log(num1)
+//     }
+//     inner()
+// }
+
+// outer()
+
+// ---------------------------------------------------------  
+
+// function outer() {
+//     let num = 10;
+//     console.log('Outer Function!')
+
+//     function inner() {
+//         console.log(num)
+//         console.log('Inner function!')
+//     }
+    
+//     return inner
+
+// }
+
+// outer() 
