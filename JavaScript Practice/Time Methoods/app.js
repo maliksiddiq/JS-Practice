@@ -1,4 +1,4 @@
-console.log('Js Connected!');
+// console.log('Js Connected!');
 
 //  setTimeout (function, time)
 //  Ye ek function ko delay ke baad sirf ek baar chalata hai.
@@ -112,7 +112,7 @@ console.log('Js Connected!');
 // clearTimeout(timerId)
 
 
-// --------------------   setInterval(function , delay) ------------------- 
+// --------------------  setInterval(function , delay) ------------------- 
 
 // function sayHi() {
 //     console.log('Hi Everyone!')
@@ -358,3 +358,118 @@ console.log('Js Connected!');
 // const reminder = (a , b) => a % b
 
 // console.log(reminder(10 , 3))
+
+// ---------------------------------------------------------------
+
+// const  num = () => {
+//     return  20
+// }
+
+// console.log(num())
+
+
+// ---------------------------------------------------------------
+
+// ------------------------- Lexical Scoping and Cosure ----------------------------- 
+
+//  Lexical Scope kya hota hai
+
+// "Lexical" ka matlab hota hai code likhne ke waqt determine hona, na ke code chalne ke waqt.
+// JavaScript me scope decide hota hai code ke structure se, brackets ({ }) se, function boundaries se.
+// Jahan function likha gaya hai, wahan se decide ho jata hai ke konsa variable kaha accessible hoga.
+
+// Lexical Scope    Jahan function likha gaya, wahan ka environment
+
+// Closure  Function ka apne lexical scope ko yaad rakhna (even after outer function finishes)
+
+
+// let name = "Ali";
+
+// function greet() {
+//   console.log(name);  // function ke bahar ka variable access ho raha hai
+// }
+
+// greet();  // Ali
+
+
+// --------------------------------------------------------------- 
+
+// Jo variable outer scope me hota hai → inner function use kar sakta hai
+
+// But inner function ke variables → outer code nahi dekh sakta
+
+// --------------------------------------------------------------- 
+
+// -------------------- Closure -------------------- 
+
+// A closure is a function that remembers its surrounding (lexical) scope even after 
+// the outer function has finished executing.
+
+
+// function counter() {
+//   let count = 0;   // outer scope variable
+
+//   return function () {
+//     count++;
+//     console.log(count);
+//   };
+// }
+
+// let c = counter();
+
+// c();   // 1
+// c();   // 2
+// c();   // 3
+
+
+// --------------------------------------------------------------- 
+
+// function createCart() {
+//   let items = 0;   // private variable
+
+//   return function () {
+//     items++;
+//     console.log("Items in cart:", items);
+//   };
+// }
+
+// const cart = createCart();
+
+// cart();  // Items: 1  
+// cart();  // Items: 2  
+// cart();  // Items: 3
+
+
+// --------------------------------------------------------------- 
+
+// function hello() {
+//   let name = "Malik";
+//   setTimeout(function () {
+//     console.log("Hello " + name);
+//   }, 2000);
+// }
+
+
+// hello();
+
+// --------------------------------------------------------------- Closure ---
+
+// Agar function apne lexical scope ke variables ko outer function ke khatam hone ke baad bhi access kare — isko closure kehte hain
+
+// ➡️ Jab ek inner function, outer function ke variables ko us waqt bhi access kare jab outer function already finish ho chuka ho.
+
+// Inner function apne birth-place ka environment yaad rakhta hai — isi yaad ko closure kehte hain.
+
+// function outer() {
+//   let x = 10; 
+
+//   function inner() {
+//     console.log(x);   
+//   }
+
+//   return inner;
+// }
+
+// const fn = outer();
+// console.log(fn())
+// fn();
